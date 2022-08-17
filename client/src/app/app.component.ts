@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
   getUsers(): void {
     axios
-      .get('https://localhost:7026/users')
+      .get('https://localhost:7026/api/users')
       .then((res) => {
         this.users = res.data;
       })

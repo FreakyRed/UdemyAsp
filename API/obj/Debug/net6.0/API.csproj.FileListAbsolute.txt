@@ -52,3 +52,11 @@
 /home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/obj/Debug/net6.0/ref/API.dll
 /home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Humanizer.dll
 /home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

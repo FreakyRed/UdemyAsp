@@ -1,21 +1,13 @@
-using API.Data;
-using API.Interfaces;
-using API.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Cors;
-
+using API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 var AllowSpecificOrigins = "_allowSpecificOrigins";
 
 
 // Add services to the container.
+builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
 
-builder.Services.AddScoped<ITokenService, TokenService>();
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
-});
 
 builder.Services.AddCors(options =>
 {
@@ -41,8 +33,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseAuthorization();
 app.UseCors(AllowSpecificOrigins);
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 

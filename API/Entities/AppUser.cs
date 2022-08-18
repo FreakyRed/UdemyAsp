@@ -33,7 +33,7 @@ namespace API.Entities
 
         public string? Country {get; set;}
 
-        public ICollection<Photo>? Photos {get; set;}
+        public ICollection<Photo> Photos {get; set;} = null!;
 
         public int GetAge(){
             return DateOfBirth.CalculateAge();

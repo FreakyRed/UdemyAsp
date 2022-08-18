@@ -60,3 +60,4 @@
 /home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
 /home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/freaky/Coding/sideprojects/dotnet-stuff/UdemyAsp/API/bin/Debug/net6.0/Data/UserSeedData.json

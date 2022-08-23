@@ -27,10 +27,10 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-//SEEDING THE DATABASE
+// SEEDING THE DATABASE
 // using var scope = app.Services.CreateScope();
 // var services = scope.ServiceProvider;
-// tryy
+// try
 // {
 //     var context = services.GetRequiredService<DataContext>();
 //     await context.Database.MigrateAsync();

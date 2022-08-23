@@ -19,7 +19,7 @@ namespace API.Entities
 
         public string? KnownAs {get; set;}
 
-        public DateTime Create { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; } = DateTime.Now;
 
         public DateTime LastActive {get; set;} = DateTime.Now;
 
@@ -35,8 +35,8 @@ namespace API.Entities
 
         public ICollection<Photo> Photos {get; set;} = null!;
 
-        // public int GetAge(){
-        //     return DateOfBirth.CalculateAge();
-        // }
+        public ICollection<UserLike> LikedByUsers { get; set; }
+
+        public ICollection<UserLike> LikedUsers {get; set;}
     }
 }

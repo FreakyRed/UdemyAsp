@@ -46,7 +46,7 @@ namespace API.Data
             //     _ => query.OrderByDescending(u => u.LastActive)
             // };
 
-            return await PagedList<MemberDto>.CreateAsync(query,userParams.PageNumber, userParams.PageSize);
+            return await PagedList<MemberDto>.CreateAsync(query, userParams.PageNumber, userParams.PageSize);
         }
 
         public async Task<AppUser> GetUserByIdAsync(int id) => await _context.Users.FindAsync(id);
@@ -56,6 +56,13 @@ namespace API.Data
             return await _context.Users.Include(p => p.Photos).SingleOrDefaultAsync(x => x.UserName == username);
         }
 
+        public async Task<string> GetUserGender(string username)
+        {
+            return await _context.Users
+                .Where(x => x.UserName == username)
+                .Select(x => x.Gender)
+                .FirstOrDefaultAsync();
+        }
 
         public async Task<IEnumerable<AppUser>> GetUsersAsync()
         {

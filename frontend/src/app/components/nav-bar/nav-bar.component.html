@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+        <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Home</span>
+  <span class="spacer"></span>
+  <mat-icon>chat</mat-icon>
+  <mat-icon>account_circle</mat-icon>
+</mat-toolbar>
+
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+        <p>Hello world</p>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

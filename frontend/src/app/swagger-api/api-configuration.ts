@@ -1,6 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
-import { Injectable } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { Inject, Injectable, Optional } from '@angular/core';
 
 /**
  * Global configuration
@@ -10,6 +11,12 @@ import { Injectable } from '@angular/core';
 })
 export class ApiConfiguration {
   rootUrl: string = '';
+
+  constructor(@Optional() @Inject(APP_BASE_HREF) params: ApiConfigurationParams){
+    if(params.rootUrl){
+      this.rootUrl = params.rootUrl;
+    }
+  }
 }
 
 /**

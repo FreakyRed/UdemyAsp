@@ -43,7 +43,7 @@ export class ApiModule {
 
   constructor( 
     @Optional() @SkipSelf() parentModule: ApiModule,
-    @Optional() http: HttpClient
+    @Optional() http: HttpClient,
   ) {
     if (parentModule) {
       throw new Error('ApiModule is already loaded. Import in your base AppModule only.');

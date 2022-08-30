@@ -12,6 +12,8 @@ import { ApiConfiguration, ApiConfigurationParams } from './swagger-api/api-conf
 import { RegisterModule } from './components/views/register/register.module';
 import { StoreModule } from '@ngrx/store';
 import {reducer as formReducer} from "./components/views/register/form-state/reducers/form.reducer"
+import { LoginModule } from './components/views/login/login.module';
+import { ValidationService } from './services/validation.service';
 
 export function apiConfigFactory(): ApiConfiguration {
   const params: ApiConfigurationParams = {
@@ -22,7 +24,7 @@ export function apiConfigFactory(): ApiConfiguration {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +34,10 @@ export function apiConfigFactory(): ApiConfiguration {
     HttpClientModule,
     NavBarModule,
     StoreModule.forRoot({}),
+    LoginModule,
     RegisterModule,
   ],
-  providers: [],
+  providers: [ValidationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,28 @@
+<mat-card>
+  <h1>The Dating App</h1>
+
+  <div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        
+      <mat-form-field appearance="outline">
+        <input id="username" formControlName="username" matInput placeholder="Username" required>
+    </mat-form-field>
+    <div class="alerts" *ngIf="username?.hasError('required') && username?.touched">This field is required</div>
+
+      <mat-form-field appearance="outline">
+        <input type="password" formControlName="password" matInput placeholder="Password">
+      </mat-form-field>
+      <div class="alerts" *ngIf="password?.hasError('required') && password?.touched">This field is required</div>
+      <div class="alerts" *ngIf="password?.hasError('minlength') && password?.touched">Password needs to be atleast 4 letters</div>
+
+      <div class="buttons">
+        <button [disabled]="!loginForm.valid" mat-raised-button color="primary">Sign in</button>
+      </div>
+      
+      <p>Don't have an account?</p>
+
+      <button type="submit" mat-stroked-button color="primary" [routerLink]="'register'"> Register here </button>
+
+    </form>
+  </div>
+</mat-card>

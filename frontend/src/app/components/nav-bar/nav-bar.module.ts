@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatSidenavModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     NavBarComponent

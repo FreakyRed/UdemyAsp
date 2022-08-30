@@ -10,9 +10,10 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 import { MatNativeDateModule } from '@angular/material/core';
 import { RouterModule } from '@angular/router';
+import { PatchFormGroupValuesDirective } from './form-state/directives/patch-form-group-values.directive';
 
 @NgModule({
-  declarations: [RegisterComponent],
+  declarations: [RegisterComponent, PatchFormGroupValuesDirective],
   imports: [
     CommonModule,
     ReactiveFormsModule,

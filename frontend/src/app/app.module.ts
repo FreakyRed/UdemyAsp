@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ApiConfiguration, ApiConfigurationParams } from './swagger-api/api-configuration';
 import { RegisterModule } from './components/views/register/register.module';
+import { StoreModule } from '@ngrx/store';
+import {reducer as formReducer} from "./components/views/register/form-state/reducers/form.reducer"
 
 export function apiConfigFactory(): ApiConfiguration {
   const params: ApiConfigurationParams = {
@@ -29,7 +31,8 @@ export function apiConfigFactory(): ApiConfiguration {
     ApiModule.forRoot(apiConfigFactory()),
     HttpClientModule,
     NavBarModule,
-    RegisterModule
+    StoreModule.forRoot({}),
+    RegisterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
